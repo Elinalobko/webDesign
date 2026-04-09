@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Назва сторінки</title>
+<style>
+.myButton {
+	box-shadow:inset 0px 1px 0px 0px #e184f3;
+	background:linear-gradient(to bottom, #c123de 5%, #a20dbd 100%);
+	background-color:#c123de;
+	border-radius:6px;
+	border:1px solid #a511c0;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #9b14b3;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #a20dbd 5%, #c123de 100%);
+	background-color:#a20dbd;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+        
+</style>
+</head>
+<body>
+<h1 id="top">Пінгвіни</h1>
+<p>Пінгвіни — це унікальні нелітаючі птахи, які живуть переважно в Південній півкулі. Вони чудово пристосовані до життя у воді та є відмінними плавцями.</p>
+<h2 id="habitat">Місце проживання</h2>
+<p>Пінгвіни мешкають у різних регіонах — від крижаних берегів Антарктиди до тепліших островів.</p>
+<ul>
+    <li>Антарктида</li>
+    <li>Південна Америка</li>
+    <li>Африка</li>
+    <li>Австралія</li>
+</ul>
+<h3 id="antarctica">Антарктида</h3>
+<p>Більшість пінгвінів живе саме тут. Вони витримують дуже низькі температури.</p>
+<h3 id="warm">Теплі регіони</h3>
+<p>Деякі види пінгвінів мешкають навіть у теплих кліматах, наприклад, в Африці.</p>
+<h2 id="food">Харчування</h2>
+<p>Пінгвіни харчуються переважно морськими тваринами.</p>
+<ul>
+    <li>Риба</li>
+    <li>Криль</li>
+    <li>Кальмари</li>
+</ul>
+<h2 id="behavior">Поведінка</h2>
+<p>Пінгвіни живуть колоніями і часто взаємодіють один з одним.</p>
+<h3 id="communication">Спілкування</h3>
+<p>Вони використовують звуки та рухи для спілкування.</p>
+<h3 id="movement">Пересування</h3>
+<p>На суші пінгвіни ходять, а у воді — швидко плавають.</p>
+<h2 id="interesting">Цікаві факти</h2>
+<ul>
+    <li>Пінгвіни не вміють літати</li>
+    <li>Вони можуть пірнати на велику глибину</li>
+    <li>Деякі види можуть жити до 20 років</li>
+</ul>
+<p><a href="#top">Повернутися на початок документа</a></p>
+<p><a href="#food">Перейти до харчування</a> |</p>
+<p><a href="#behavior">Перейти до поведінки</a></p>
+<p><a href="https://uk.wikipedia.org/wiki/%D0%9F%D1%96%D0%BD%D0%B3%D0%B2%D1%96%D0%BD%D0%BE%D0%B2%D1%96">Посилання на інформацію про пінгвінів</a></p>
+<p><button onclick="location.href='list.html'">Перейти на практичну зі списками</button></p>
+<p><button onclick="location.href='table.html'">Перейти на практичну з таблицями</button></p>
+<p><a href="#" class="myButton">purple</a></p>
+<button onclick="penguinFact()">Показати цікавий факт про пінгвінів</button>
+<script>
+function penguinFact() {
+const facts=[
+"Пінгвіни не вміють літати, але чудово плавають.",
+"Деякі пінгвіни можуть пірнати на глибину до 500 метрів.",
+"Малий пінгвін — найменший вид пінгвінів, живе в Австралії.",
+"Пінгвіни живуть колоніями і взаємодіють один з одним за допомогою звуків та рухів.",
+"Деякі види пінгвінів можуть жити до 20 років."
+];
+    const randomFact=facts[Math.floor(Math.random() * facts.length)];
+    alert(randomFact);
+}
+</script>
+</body>
+</html>
