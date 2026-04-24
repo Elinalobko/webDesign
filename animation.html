@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Анімація</title>
+<style>
+body {
+background: linear-gradient(270deg, #0f0f0f, #1a1a2e, #16213e);
+background-size: 600% 600%;
+animation: bgMove 10s ease infinite;
+}
+@keyframes bgMove {
+0% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
+}
+.movingText {
+width: 300px;
+overflow: hidden;
+white-space: nowrap;
+box-sizing: border-box;
+background: rgba(0, 0, 0, 0.35);
+padding: 10px;
+border-radius: 10px;
+}
+.movingText span {
+color: #ffffff;
+text-shadow: 0 0 5px black, 0 0 10px #00f7ff;
+display: inline-block;
+padding-left: 100%;
+animation: scroll 8s linear infinite;
+font-size: 30px;
+}
+@keyframes scroll {
+from { transf	orm: translateX(0); }
+to { transform: translateX(-100%); }
+}
+.circle {
+width: 120px;
+height: 120px;
+border-radius: 50%;
+background: transparent;
+border: 3px solid #00f7ff;
+box-shadow: 0 0 20px #00f7ff, 0 0 40px #00f7ff;
+animation: pulse 2s infinite ease-in-out;
+}
+@keyframes pulse {
+0% {
+transform: scale(1);
+box-shadow: 0 0 20px #00f7ff, 0 0 40px #00f7ff;
+}
+50% {
+transform: scale(1.4);
+box-shadow: 0 0 40px #00f7ff, 0 0 80px #00f7ff;
+}
+100% {
+transform: scale(1);
+box-shadow: 0 0 20px #00f7ff, 0 0 40px #00f7ff;
+}
+}
+.square {
+width: 100px;
+height: 100px;
+margin-top: 40px;
+background: linear-gradient(45deg, #ff00ff, #00f7ff);
+animation: rotateMorph 4s infinite linear;
+}
+@keyframes rotateMorph {
+0% {
+transform: rotate(0deg);
+border-radius: 0%;
+}
+25% {
+border-radius: 25%;
+}
+50% {
+transform: rotate(180deg);
+border-radius: 50%;
+}
+75% {
+border-radius: 25%;
+}
+100% {
+transform: rotate(360deg);
+border-radius: 0%;
+}
+}
+.particle {
+position: absolute;
+bottom: -10px;
+width: 6px;
+height: 6px;
+background: #00f7ff;
+border-radius: 50%;
+animation: floatUp 6s linear infinite;
+opacity: 0.7;
+}
+@keyframes floatUp {
+0% {
+transform: translateY(0) scale(1);
+opacity: 0.7;
+    }
+100% {
+transform: translateY(-100vh) scale(0.3);
+opacity: 0;
+}
+}
+.p1 { left: 10%; animation-duration: 5s; }
+.p2 { left: 30%; animation-duration: 7s; }
+.p3 { left: 50%; animation-duration: 6s; }
+.p4 { left: 70%; animation-duration: 8s; }
+.p5 { left: 90%; animation-duration: 4s; }
+</style>
+</head>
+<body>
+<div class="circle"></div>
+<div class="movingText">
+<span>Лабораторна робота10</span>
+</div>
+<div class="square"></div>
+<div class="particle p1"></div>
+<div class="particle p2"></div>
+<div class="particle p3"></div>
+<div class="particle p4"></div>
+<div class="particle p5"></div>
+</body>
+</html>
